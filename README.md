@@ -1,11 +1,11 @@
 # AVR_Drivers
 AVR Drivers Based on (atmega32)
 
-##Layered Architecture
+## Layered Architecture
 
-###Libraries Layer
+### Libraries Layer
 
-###MCAL Layer
+### MCAL Layer
 1-DIO
 2-EXTI
 3-GI
@@ -14,7 +14,7 @@ AVR Drivers Based on (atmega32)
 6-WDT
 7-UART
 
-###HAl Layer
+### HAl Layer
 1-LCD
 2-KEYPAD
 3-DC Motor
