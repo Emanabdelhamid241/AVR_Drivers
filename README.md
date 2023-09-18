@@ -7,16 +7,30 @@ AVR Drivers Based on (atmega32)
 
 ### MCAL Layer
 1-DIO
+
 2-EXTI
+
 3-GI
+
 4-ADC
+
 5-Timers
+
 6-WDT
+
 7-UART
+
+8-SPI
+
+9-I2C
 
 ### HAl Layer
 1-LCD
+
 2-KEYPAD
+
 3-DC Motor
+
 4-Stepper Motor
+
 5-Servo Motor
