@@ -55,7 +55,18 @@
 #define TIMER0_u8_Counter_of_OVF_CTC   10000
 
 
-
+///*macros for modes*/
+//#define NORMAL_MODE                 1
+//#define CTC_MODE                    2
+//#define FAST_PWM_MODE               3
+//#define PHASE_CORRECT_PWM_MODE      4
+/*bit mask to set scaler*/
+#define itil_bit_mask 11111000
+/*modes*/
+#define NORMAL_MODE   0
+#define CTC_MODE      1
+#define PHASE_CORRECT_MODE 2
+#define FAST_PWM_MODE 3
 
 /*TIMER1 TCCR1A */
 #define timers_WGM10_BIT0              0
@@ -74,5 +85,45 @@
 
 /*TIMER1 TOP Value IN OCI1*/
 #define TIMER1_u16_TOP_Value_IN_OCI1     19999
+typedef enum
+{
+	TIMER1_NORMAL_MODE=0,
+	TIMER1_CTC_ICR_TOP_MODE,
+	TIMER1_CTC_OCRA_TOP_MODE,
+	TIMER1_FASTPWM_ICR_TOP_MODE,
+	TIMER1_FASTPWM_OCRA_TOP_MODE
 
+}Timer1_Mode_type;
+
+typedef enum
+{
+	OCRA_DISCONNECTED=0,
+	OCRA_TOGGLE,
+	OCRA_NON_INVERTING,
+	OCRA_INVERTING
+
+}OC1A_Mode_type;
+
+/*prescaler*/
+typedef enum{
+	TIMERSTOP=0,
+	TIMER0_SCALER_1,
+	TIMER0_SCALER_8,
+	TIMER0_SCALER_64,
+	TIMER0_SCALER_256,
+	TIMER0_SCALER_1024,
+//	EXTERNAL0_FALLING,
+//	EXTERNAL0_RISING
+}Timer0_Scaler_type;
+
+typedef enum{
+	    TIMER1_STOP=0,
+		TIMER1_SCALER_1,
+		TIMER1_SCALER_8,
+		TIMER1_SCALER_64,
+		TIMER1_SCALER_256,
+		TIMER1_SCALER_1024,
+		EXTERNAL0_FALLING,
+		EXTERNAL0_RISING
+}Timer1_Scaler_type;
 #endif

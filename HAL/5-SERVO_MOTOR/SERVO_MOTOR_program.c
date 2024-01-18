@@ -20,7 +20,7 @@ ES_t SERVO_motor_enum_INIT (void)
 {
 ES_t  Local_enu_Erorr_State = ES_OK ;
 DIO_u8_Set_Pin_Direction(DIO_u8_PORTD,DIO_u8_PIN5,DIO_u8_OUTPUT);
-TIMERS_enum_TIMER1_INIT(FAST_PWM_NON_INVERTING_MODE);
+TIMERS_enum_TIMER1_INIT(TIMER1_FASTPWM_ICR_TOP_MODE,  OCRA_NON_INVERTING ,  TIMER0_SCALER_8  );
 
 return Local_enu_Erorr_State;
 }
